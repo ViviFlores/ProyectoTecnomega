@@ -5,13 +5,13 @@ import java.sql.*;  //importar todo lo que ocntiene el paquete
 
 public class Conexion {
     
-    private static final String JDBC_URL="jdbc:mysql://localhost:3306/empresa_relsb?useSSL=false&serverTimezone=UTC";
+    private static final String JDB_URL="jdbc:mysql://localhost:3306/empresa_relsb?useSSL=false&serverTimezone=UTC";
     private static final String JDBC_USER="root";
     private static final String JDBC_PASSWORD="admin";
     
     //método para obtener le objeto de conexión
     public static Connection getConnection() throws SQLException{ //extender la exception
-        return DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+        return DriverManager.getConnection(JDB_URL, JDBC_USER, JDBC_PASSWORD);
     }
     
     //método que cierra los objetos de conexión
